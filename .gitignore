@@ -1,0 +1,4 @@
+.DS_Store
+node_modules
+src/__image_snapshots__/__diff_output__
+yarn.lock
