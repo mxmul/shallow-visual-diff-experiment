@@ -1,10 +1,7 @@
 import React from "react";
 import puppeteer from 'puppeteer';
-import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import ReactDOMServer from '../vendor/react-dom-server.node.development';
 import { B } from "./index";
-
-expect.extend({ toMatchImageSnapshot });
 
 test("matches visual snapshot test", async () => {
   const browser = await puppeteer.launch();
