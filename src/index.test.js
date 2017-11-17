@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import puppeteer from 'puppeteer';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import ReactDOMServer from '../vendor/react-dom-server.node.development';

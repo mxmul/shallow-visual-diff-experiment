@@ -1,4 +1,3 @@
 module.exports = {
-  setupFiles: ["./raf.setup.js", "./enzyme.setup.js"],
-  snapshotSerializers: ["enzyme-to-json/serializer"]
+  setupFiles: ["./raf.setup.js"],
 };
