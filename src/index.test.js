@@ -11,12 +11,16 @@ test("matches visual snapshot test", async () => {
     <!doctype html>
     <head>
         <body>
-            ${ReactDOMServer.renderToString(<B msgs={["foo", "bar"]} />)}
+            <div id="acuity-component">
+                ${ReactDOMServer.renderToString(<B msgs={["foo", "bar"]} />)}
+            </div>
         </body>
     </head>
   `;
   page.setContent(content);
-  const screenshot = await page.screenshot();
+
+  const elementHandle = await page.$('#acuity-component');
+  const screenshot = await elementHandle.screenshot();
 
   expect(screenshot).toMatchImageSnapshot();
 
@@ -46,12 +50,16 @@ test("matches shallow visual snapshot test", async () => {
             }
         </style>
         <body>
-            ${ReactDOMServer.renderToString(<B msgs={["foo", "bar"]} />)}
+            <div id="acuity-component">
+                ${ReactDOMServer.renderToString(<B msgs={["foo", "bar"]} />)}
+            </div>
         </body>
     </head>
   `;
   page.setContent(content);
-  const screenshot = await page.screenshot();
+
+  const elementHandle = await page.$('#acuity-component');
+  const screenshot = await elementHandle.screenshot();
 
   expect(screenshot).toMatchImageSnapshot();
 
