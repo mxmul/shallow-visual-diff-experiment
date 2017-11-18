@@ -44,9 +44,11 @@ test("matches shallow visual snapshot test", async () => {
                 background-color: hotpink;
                 text-align: center;
                 content: "";
+                visibility: visible;
             }
             [data-acuity-is-custom-component] [data-acuity-is-custom-component] {
-                 position:relative !important;
+                position: relative !important;
+                visibility: hidden !important;
             }
         </style>
         <body>
