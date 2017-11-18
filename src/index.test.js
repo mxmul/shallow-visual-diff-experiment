@@ -43,7 +43,7 @@ test("matches shallow visual snapshot test", async () => {
                 right: 0;
                 background-color: hotpink;
                 text-align: center;
-                content: "";
+                content: attr(data-acuity-component-name);
                 visibility: visible;
             }
             [data-acuity-is-custom-component] [data-acuity-is-custom-component] {

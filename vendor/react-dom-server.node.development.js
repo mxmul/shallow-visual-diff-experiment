@@ -2284,7 +2284,7 @@ var ReactDOMServerRenderer$1 = function () {
             copyElement.props = Object.assign(
                 {},
                 copyElement.props,
-                { "data-acuity-is-custom-component": true }
+                { "data-acuity-is-custom-component": true, "data-acuity-component-name": child.type.name }
             );
         }
         // console.log(copyElement.type);
